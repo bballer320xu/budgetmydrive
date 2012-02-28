@@ -1,0 +1,57 @@
+
+
+html {
+    background-image: url(background.jpg);
+		background-size: 100% 100%;
+		background-repeat:no-repeat;
+		height: 100%;		 
+		min-width: 1200px;
+		font-family: 'Expletus Sans', cursive;
+}
+
+body {
+	height: 100%;
+	margin: 0;
+}
+
+#wrapper{
+	padding: 40px 5% 0 5%;
+	#form{
+		float: left;
+		padding: 10px 25px;
+		background-color:rgba(255,255,255,0.7);
+		width: 95%;
+		min-height: 750px;
+		border-radius: 30px; 
+		-moz-border-radius: 30px; 
+		-webkit-border-radius: 30px; 
+		border: 2px solid #800000;
+		#form_entry{
+			font-size: 20px;
+			margin: 20px 10px;
+		}
+		input{
+			font-family: 'Expletus Sans', cursive;
+		}
+	}
+	
+	#ads{
+		float: right;
+		padding: 10px;
+		background-color:rgba(255,255,255,0.7);
+		width: 25%;
+		min-height: 750px;
+		border-radius: 30px; 
+		-moz-border-radius: 30px; 
+		-webkit-border-radius: 30px; 
+		border: 2px solid #800000;
+		#form_entry{
+			font-size: 20px;
+			margin: 30px 10px;
+		}
+	}
+	
+	#budget{
+		text-align: center;
+	}
+}

@@ -1,0 +1,3 @@
+== Budget My Drive
+
+Simple web application to calculate your monthly gasoline budget.  Based on MSRP Mileage data and weekly gas price data.

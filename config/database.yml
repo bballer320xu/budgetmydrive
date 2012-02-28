@@ -1,0 +1,24 @@
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: budgetmydrive_development
+  pool: 5
+  username: <%= APP_CONFIG["db_username"] %>
+  password: <%= APP_CONFIG["db_password"] %>
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: budgetmydrive_test
+  pool: 5
+  username: <%= APP_CONFIG["db_username"] %>
+  password: <%= APP_CONFIG["db_password"] %>
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: budgetmydrive_production
+  pool: 5
+  username: <%= APP_CONFIG["db_username"] %>
+  password: <%= APP_CONFIG["db_password"] %>
