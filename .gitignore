@@ -6,14 +6,20 @@
 
 # Ignore bundler config
 /.bundle
-
-# Ignore the default SQLite database.
-/db/*.sqlite3
-
-# Ignore all logfiles and tempfiles.
-/log/*.log
-/tmp
-
-# Ignore my config.yml file
 config.yml
 deploy.rb
+*~
+*.cache
+*.log
+*.pid
+tmp/**/*
+.DS_Store
+db/cstore/**
+doc/api
+doc/app
+doc/plugins
+doc/*.dot
+coverage/*
+db/*.sqlite3
+*.tmproj
+*.sw?
