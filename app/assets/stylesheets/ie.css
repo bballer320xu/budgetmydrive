@@ -1,0 +1,20 @@
+#header_title{
+	background-color: yellow;
+}
+
+#form{
+	background-color: DimGray;
+}
+
+#sidebar{
+		background-color: DimGray;
+}
+
+#form_entry{
+	margin-right: 25px;
+}
+
+table{
+	margin: 10px;
+	width: 95%;
+}
