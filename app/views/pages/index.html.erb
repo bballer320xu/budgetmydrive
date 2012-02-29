@@ -1,7 +1,7 @@
 <%= form_tag('/get_data', :remote => true) %>  
 
 <div id="form">
-  
+<div id="header_title">Calculate your Monthly Budget</div>  
 <div id="form_entry">
 <%= label_tag 'Select the region you live in'%>
 <%= select("region", "region_name", @regions.each.collect {|p| [ p.name, p.id ] }, {:include_blank => false}, :class => "right" ) %>
@@ -13,7 +13,7 @@
 </div>
 
 <div id="form_entry">
-<%= label_tag 'How many miles do you drive each week after your commute?'%>
+<%= label_tag 'How many other miles do you drive each week?'%>
 <%= number_field_tag 'other_miles', nil, :in => 1...1000, :class => "right" %>
 </div>
 
@@ -44,14 +44,17 @@
 </div>
 
 <div id="form_entry" class="center">
-<%= submit_tag "Calculate my Budget", :id => "submitBtn" %>
+<%= submit_tag "Calculate my Monthly Budget", :id => "submitBtn" %>
 </div>
 
-<h2>
+
 <div id="budget">&nbsp;</div>
-</h2>
+
 </div>
 </form>
+<div id="sidebar">
+ <%= render "weekly_prices" %>
+</div>
 
 
 

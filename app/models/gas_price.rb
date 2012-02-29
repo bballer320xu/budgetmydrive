@@ -9,4 +9,8 @@ class GasPrice < ActiveRecord::Base
   def self.get_latest_date
     self.maximum(:release_date, :group => 'entity_id').first[1]
   end
+  
+  def self.get_previous_prices(start_date, end_date)
+    self.where("release_date > ? AND release_date <= ?", start_date, end_date).order("release_date ASC").all
+  end
 end

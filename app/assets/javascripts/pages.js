@@ -150,7 +150,7 @@ $(document).ready(function(){
 	
 	$("#wrapper")
 	.bind("ajax:success", function(event, data, status, xhr) {
-			$("#budget").html("Based off this data, your monthly gasoline budget should be $"+data.monthly_budget.toFixed(2)+".");
+			$("#budget").html("Considering the current gas prices in your region, you should budget $"+data.monthly_budget.toFixed(2)+". for gas this month.");
 	})
 	.bind("ajax:error",function(xhr, status, error)  {
 			$("#budget").html("Error");
