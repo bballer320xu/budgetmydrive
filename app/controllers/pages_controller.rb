@@ -8,14 +8,14 @@ class PagesController < ApplicationController
     @dates = Set.new
     @by_entity = {}
     GasPrice.get_previous_prices(Date.today - 2.weeks,Date.today - 1.week).each do |entity| 
-      @dates << entity.release_date
+      @dates << entity.release_date.beginning_of_week
       if (Entity.find(entity.entity_id).entity_type == "region")
         @by_entity[Entity.find(entity.entity_id).name] = [{:release_date => entity.release_date, :price => entity.price}]
       end
     end
     
     GasPrice.get_previous_prices(Date.today - 1.week, Date.today).each do |entity|
-      @dates << entity.release_date
+      @dates << entity.release_date.beginning_of_week
       if (Entity.find(entity.entity_id).entity_type == "region")
         @by_entity[Entity.find(entity.entity_id).name] << {:release_date => entity.release_date, :price => entity.price}
       end
