@@ -55,7 +55,6 @@ table{
 
 #wrapper{
 	width: 100%;
-	
 	#logo{
 		background: url(logo.png) no-repeat;
 		background-position: left;
@@ -110,6 +109,28 @@ table{
 			padding: 5px 20px;
 		}
 	}
+		
+		
+	#legal{
+		background: url(logo.png) no-repeat;
+		background-position: left;
+		height: 120px;
+		margin-left: 30px;
+		padding: 10px;
+		#text{
+			margin-left: -30px;
+			margin-top: 150px;
+			font-size: 10px;
+			padding: 20px;
+			background-color:rgba(0,0,0,0.5);
+			min-height: 500px;
+			border-radius: 30px; 
+			-moz-border-radius: 30px; 
+			-webkit-border-radius: 30px; 
+			border: 2px solid #800000;
+
+		}
+	}
 	
 	
 	
@@ -143,5 +164,55 @@ table{
 	.text-right{
 		text-align: right;
 	}
+	
+	
+	
+	
+	
+	.clear { /* generic container (i.e. div) for floating buttons */
+	    overflow: hidden;
+	    width: 100%;
+	}
 
+	a.button {
+	    background: transparent url('btn_end.png') no-repeat scroll top right;
+	    color: #444;
+	    display: block;
+	    float: left;
+	    font: normal 12px arial, sans-serif;
+	    height: 24px;
+	    margin-right: 6px;
+	    padding-right: 18px; /* sliding doors padding */
+	    text-decoration: none;
+	}
+
+	a.button span {
+	    background: transparent url('btn_start.png') no-repeat;
+	    display: block;
+	    line-height: 14px;
+	    padding: 5px 0 5px 18px;
+	}
+	a.button:active {
+	    background-position: bottom right;
+	    color: #000;
+	    outline: none; /* hide dotted outline in Firefox */
+	}
+
+	a.button:active span {
+	    background-position: bottom left;
+	    padding: 6px 0 4px 18px; /* push text down 1px */
+	}
+
+	#footer{
+		font-size: .8em;
+		height: 50px;
+		text-align: center;
+		color: #000000;
+		#foot_inner{
+			padding: 50px;
+		}
+		a{
+			color: #800000;
+		}
+	}
 }
