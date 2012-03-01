@@ -1,49 +1,49 @@
 <%= form_tag('/get_data', :remote => true) %>  
 
 <div id="form">
-<div id="header_title">Calculate your Monthly Budget</div>  
-<div id="form_entry">
-<%= label_tag 'Select the region you live in'%>
+<div class="header_title"><h1>Calculate your Monthly Budget</h1></div>  
+<div class="form_entry">
+<%= label_tag "region_region_name", 'Select the region you live in'%>
 <%= select("region", "region_name", @regions.each.collect {|p| [ p.name, p.id ] }, {:include_blank => false}, :class => "right" ) %>
 </div>
 
-<div id="form_entry">
-<%= label_tag 'How many miles do your drive to work every day? (One Way)'%>
+<div class="form_entry">
+<%= label_tag "commute", 'How many miles do your drive to work every day? (One Way)'%>
 <%= number_field_tag 'commute', nil, :in => 1...200, :class => "right"  %>
 </div>
 
-<div id="form_entry">
-<%= label_tag 'How many other miles do you drive each week?'%>
+<div class="form_entry">
+<%= label_tag "other_miles", 'How many other miles do you drive each week?'%>
 <%= number_field_tag 'other_miles', nil, :in => 1...1000, :class => "right" %>
 </div>
 
-<div id="form_entry">
-<%= label_tag 'Model Year'%>
+<div class="form_entry">
+<%= label_tag "model_model_year", 'Model Year'%>
 <%= select("model", "model_year", Model.model_years, {:include_blank => true, :id => "model_year"}, :class => "required_input right") 
 %>
 </div>
 
-<div id="form_entry">
-<%= label_tag 'Make'%>
-<%= select("model", "model_make", [], {:include_blank => false, :id => "model_year"}, :class => "required_input right") %>
+<div class="form_entry">
+<%= label_tag "model_model_make", 'Make'%>
+<%= select("model", "model_make", [], {:include_blank => false, :id => "model_make"}, :class => "required_input right") %>
 </div>
 
-<div id="form_entry">
-<%= label_tag 'Model'%>
-<%= select("model", "model_name", [], {:include_blank => false, :id => "model_year"}, :class => "required_input right") %>
+<div class="form_entry">
+<%= label_tag "model_model_name", 'Model'%>
+<%= select("model", "model_name", [], {:include_blank => false, :id => "model_name"}, :class => "required_input right") %>
 </div>
 
-<div id="form_entry">
-<%= label_tag 'Transmission'%>
-<%= select("model", "model_transmission", [], {:include_blank => false, :id => "model_year"}, :class => "required_input right") %>
+<div class="form_entry">
+<%= label_tag "model_model_transmission", 'Transmission'%>
+<%= select("model", "model_transmission", [], {:include_blank => false, :id => "model_transmission"}, :class => "required_input right") %>
 </div>
 
-<div id="form_entry">
-<%= label_tag 'Engine Size'%>
+<div class="form_entry">
+<%= label_tag "model_model_engine_size", 'Engine Size'%>
 <%= select("model", "model_engine_size", [], {:include_blank => false, :id => "model_year"}, :class => "required_input right") %>
 </div>
 
-<div id="form_entry" class="center">
+<div class="form_entry center">
 <%= submit_tag "Calculate my Monthly Budget", :id => "submitBtn" %>
 </div>
 

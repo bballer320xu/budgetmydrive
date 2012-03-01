@@ -1,14 +1,17 @@
-<div id="header_title">Latest Regional Gas Prices</div>
+<div class="header_title"><h1>Latest Regional Gas Prices</h1></div>
 <table>
+  <thead>
   <tr>
     <th>Region</th>
     <th><%= @dates[0].strftime('%m/%d')%></th>
     <th><%= @dates[1].strftime('%m/%d')%></th>
     <th>Change</th>
   </tr>
-  <tr>
-
+  </thead>
+  <tbody>
+  
   <% @by_entity.each_pair do |name, prices_hash| %>
+  <tr>
     <td><%= name %></td>
     <% @difference = 0.0%>
     <% @price_two = 0.0 %>
@@ -19,12 +22,10 @@
       <% else %>
         <% @difference = ph[:price].to_d %>
       <% end %>
-      
-      
-      
     <% end %>
       <td class="<%= (@difference >= 0) ? 'up' : 'down'%> text-right"><%= number_to_currency(@difference) %></td>
     </tr>
     
   <% end %>
+  </tbody>
 </table>
