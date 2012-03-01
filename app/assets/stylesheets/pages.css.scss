@@ -58,19 +58,17 @@ table{
 	
 	#logo{
 		background: url(logo.png) no-repeat;
-		background-position: center;
-		height: 170px;
+		background-position: left;
+		height: 120px;
+		margin-left: 30px;
 		padding: 10px;
 		#ads{
 			float: right;
-			padding: 10px 25px;
-			background-color:rgba(0,0,0,0.5);
-			width: 35%;
-			min-height: 150px;
-			border-radius: 30px; 
-			-moz-border-radius: 30px; 
-			-webkit-border-radius: 30px; 
-			border: 2px solid #800000;
+			width: 728px;
+			height: 90px;
+			margin-top: 15px;
+			margin-right: 20px;
+
 		}
 	}
 	
